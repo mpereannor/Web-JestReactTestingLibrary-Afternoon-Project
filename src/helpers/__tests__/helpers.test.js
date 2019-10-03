@@ -26,18 +26,23 @@ describe('sum', () => {
   });
 });
 
-describe('sum', () => {
-  it('returns sth if sth', () => {
-    expect(helpers.sum()).toBe(null);
-  });
-  it('returns null if ');
-  it();
-  it();
-  it();
-
-})
 describe('multiply', () => {
   // write tests! <================================================
+
+ it('throws if fed sth which is not a number ', () => {
+    expect(() => helpers.multiply('1', '2')).toThrow();
+  });
+
+  it( 'multiplies positive number correctly', () => { 
+    expect(helpers.multiply(2,4)).toBe(8);
+  });
+
+  it('multiplies negative number correctly', () => { 
+    expect(helpers.multiply(-2, -4)).toBe(8)
+  });
+
+
+
 });
 
 describe('personMaker', () => {
