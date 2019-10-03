@@ -62,10 +62,24 @@ describe('Counter component', () => {
 
   it('prevents the count from going over an upper limit', () => {
     // implement
+    let incButton = tools.queryByTestId('incButton');
+    for(let i = 0; i <=6; i++ ){
+      rtl.fireEvent.click(incButton);
+    }
+    expect(tools.queryByText(/6/)).not.toBeInTheDocument();
+    // 
+    // rtl.fireEvent.click(incButton);
+    // expect(tools.queryByText(/5/)).toBeInTheDocument();
   });
 
   it('prevents the count from going under a lower limit', () => {
     // implement
+
+    let decButton = tools.queryByTestId('decButton');
+    for(let i = 0; i <=6; i++ ){
+      rtl.fireEvent.click(decButton);
+    }
+    expect(tools.queryByText(/-6/)).not.toBeInTheDocument();
   });
 
   it('shows a warning once we hit the upper limit of the counter', () => {
