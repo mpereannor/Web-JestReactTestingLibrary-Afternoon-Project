@@ -67,9 +67,7 @@ describe('Counter component', () => {
       rtl.fireEvent.click(incButton);
     }
     expect(tools.queryByText(/6/)).not.toBeInTheDocument();
-    // 
-    // rtl.fireEvent.click(incButton);
-    // expect(tools.queryByText(/5/)).toBeInTheDocument();
+    
   });
 
   it('prevents the count from going under a lower limit', () => {
@@ -84,9 +82,23 @@ describe('Counter component', () => {
 
   it('shows a warning once we hit the upper limit of the counter', () => {
     // implement
+    const incButton = tools.queryByTestId('incButton');
+
+    for(let i = 0; i < 6; i++) {
+      rtl.fireEvent.click(incButton);
+    }
+    expect(tools.queryByTestId('maxWarning')).toBeInTheDocument();
   });
+    
 
   it('shows a warning once we hit the lower limit of the counter', () => {
+
     // implement
+    const decButton = tools.queryByTestId('decButton');
+
+    for(let i = 0; i < 6; i++) {
+      rtl.fireEvent.click(decButton);
+    }
+    expect(tools.queryByTestId("minWarning")).toBeInTheDocument();
   });
 });
