@@ -26,6 +26,16 @@ describe('sum', () => {
   });
 });
 
+describe('sum', () => {
+  it('returns sth if sth', () => {
+    expect(helpers.sum()).toBe(null);
+  });
+  it('returns null if ');
+  it();
+  it();
+  it();
+
+})
 describe('multiply', () => {
   // write tests! <================================================
 });
