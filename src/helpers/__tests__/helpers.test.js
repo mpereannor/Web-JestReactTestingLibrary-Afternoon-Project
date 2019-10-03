@@ -55,5 +55,16 @@ describe('personMaker', () => {
       });
   });
 
+ 
   // write more tests! <===========================================
 });
+
+
+describe ('laLiga', () => {
+  it('has the same properties', () => {
+    expect(helpers.laLiga()).toEqual({
+      player: 'messi',
+      age: '24'
+    })
+  })
+})
