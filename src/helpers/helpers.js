@@ -33,3 +33,11 @@ export function personMaker(name, age) {
 }
 
 // BUILD YOUR OWN UTILITY FUNCTIONS AND TEST THEM OUT!
+
+
+export function laLiga () {
+  return { 
+    player: 'messi',
+    age: '24'
+  }
+}

@@ -28,6 +28,21 @@ describe('sum', () => {
 
 describe('multiply', () => {
   // write tests! <================================================
+
+ it('throws if fed sth which is not a number ', () => {
+    expect(() => helpers.multiply('1', '2')).toThrow();
+  });
+
+  it( 'multiplies positive number correctly', () => { 
+    expect(helpers.multiply(2,4)).toBe(8);
+  });
+
+  it('multiplies negative number correctly', () => { 
+    expect(helpers.multiply(-2, -4)).toBe(8)
+  });
+
+
+
 });
 
 describe('personMaker', () => {
@@ -40,5 +55,16 @@ describe('personMaker', () => {
       });
   });
 
+ 
   // write more tests! <===========================================
 });
+
+
+describe ('laLiga', () => {
+  it('has the same properties', () => {
+    expect(helpers.laLiga()).toEqual({
+      player: 'messi',
+      age: '24'
+    })
+  })
+})
